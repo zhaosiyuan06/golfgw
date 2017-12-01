@@ -1,0 +1,307 @@
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#fff!important;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    position: relative;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.leader_module{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    /*background: #f8f8f8;*/
+    background:  #2B2C30;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 22;
+    border-bottom: 2px solid #666;
+}
+.navbar-default{
+    background: none!important;
+}
+.navbar{
+    margin-bottom: 0!important;
+    border: none!important;
+}
+.nav li{
+    padding: 0 10px;
+    color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover{
+    color: #6CB670!important;
+}
+.navbar-default .navbar-nav > li > a{
+    color: #fff!important;
+}
+.dropdown{
+    width: 110px!important;
+    padding: 0px!important;
+}
+.navbar-default .navbar-nav > li > a.selected{
+    background: #fff;
+    color: #6CB670!important;
+}
+.leader_module .container .navbar-default .navbar-header a{
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 24px;
+    color: #6CB670;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: relative;
+}
+.swiper-container .swiper-wrapper .swiper-slide img{
+    width: 100%;
+    height: 100%;
+}
+.swiper-container .zhe_Black{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+.golf_container,.golf_sell,.golf_news{
+    width: 100%;
+    padding: 100px 0;
+    background: #2B2C30;
+}
+.golf_container .container h3,.golf_sell .container h3,.golf_news .container h3{
+    color: #fff;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+}
+.golf_container .container h3 span,.golf_sell .container h3 span,.golf_news .container h3 span{
+    color: #6CB670;
+}
+.border{
+    border-top: 1px solid #fff;
+    height: 1px;
+    margin: 15px auto 0;
+    position: relative;
+    width: 35%
+}
+.border:before {
+    background-color: #fff;
+    border: 1px ridge #fff;
+    content: "";
+    height: 10px;
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    top: -5px;
+    width: 40px;
+}
+.golf_container .container .row,.golf_sell .container .row,.golf_news .container .row{
+    padding: 50px 0;
+}
+.golf_container .container .col-md-4{
+    color: #ddd;
+    padding: 10px 30px;
+    transition: 1s;
+    border: 1px solid  #2B2C30;
+
+}
+.golf_container .container .col-md-4:hover{
+    border: 1px solid #fff;
+}
+.golf_container .container .col-md-4 .img-box{
+    width: 100%;
+    text-align: center;
+}
+.golf_container .container .col-md-4 .img-box img{
+    display: inline-block;
+    width: 100%;
+}
+.golf_container .container .col-md-4 h4{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.golf_container .container .col-md-4 p{
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+#counter {
+    background-position: 50% 52px;
+    background-image: url(../image/city.jpg);
+    padding: 70px 0px;
+    background-attachment: fixed !important;
+
+}
+.golf_sell .container .col-md-4{
+    border: 1px solid #fff;
+    padding: 10px;
+}
+.golf_sell .container .col-md-4 a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.golf_sell .container .col-md-4 a div{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 600ms ease-out 0s;
+    -moz-transition: all 600ms ease-out 0s;
+    -o-transition: all 600ms ease-out 0s;
+    transition: all 600ms ease-out 0s;
+    -webkit-transform: rotateY(180deg) scale(0.5,0.5);
+    -moz-transform: rotateY(180deg) scale(0.5,0.5);
+    -ms-transform: rotateY(180deg) scale(0.5,0.5);
+    -o-transform: rotateY(180deg) scale(0.5,0.5);
+    transform: rotateY(180deg) scale(0.5,0.5);
+}
+.golf_sell .container .col-md-4 a:hover .zhe1{
+    opacity: 1;
+    transform: rotateY(0deg) scale(1,1);
+}
+.golf_sell .container .col-md-4 a .zhe1 img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+}
+.golf_sell .container .col-md-4 h4{
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+}
+.golf_sell .container .col-md-4 p{
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+.golf_sell .container .col-md-8  .zhe2{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+}
+.golf_sell .container .col-md-8:hover .zhe2{
+    opacity: 1;
+}
+.golf_sell .container .col-md-4 img,.golf_sell .container .col-md-8 img{
+    width: 100%;
+}
+.golf_sell .container .col-md-8{
+    border: 1px solid #fff;
+    padding: 10px;
+    text-align: center;
+}
+.golf_sell .container .col-md-8 .zhe2 span{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    background:url("../image/play.png") no-repeat center ;
+    cursor: pointer;
+}
+.video_zhezhao{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    z-index: 555;
+}
+.video_zhezhao img{
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    cursor: pointer;
+}
+.video_zhezhao .videoplay_Box{
+    width: 900px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -450px;
+    margin-top: -250px;
+}
+.golf_news{
+    background:#242528;
+}
+.golf_news .col-md-3{
+    padding: 5px;
+}
+.golf_news .col-md-3  .news_box{
+    visibility: visible;animation-duration: 500ms;animation-name: fadeInUp;
+    border: 1px solid #fff;
+    background:#242528;
+}
+.golf_news .col-md-3  .news_box img{
+    width: 100%;
+}
+/*.golf_news .col-md-3 .white_box{*/
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*background: #fff;*/
+    /*margin-bottom: -10px;*/
+    /*margin-right: -10px;*/
+/*}*/
