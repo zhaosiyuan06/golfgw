@@ -3114,7 +3114,7 @@ textarea.input-lg, select[multiple].input-lg {
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
     color: #333;
     background-color: #e6e6e6;
-    border-color: #adadad
+    /*border-color: #adadad*/
 }
 
 .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
@@ -3140,7 +3140,7 @@ textarea.input-lg, select[multiple].input-lg {
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
     color: #fff;
     background-color: #3071a9;
-    border-color: #285e8e
+    /*border-color: #285e8e*/
 }
 
 .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
@@ -3149,7 +3149,7 @@ textarea.input-lg, select[multiple].input-lg {
 
 .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
     background-color: #428bca;
-    border-color: #357ebd
+    /*border-color: #357ebd*/
 }
 
 .btn-primary .badge {
