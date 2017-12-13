@@ -68,19 +68,89 @@ $(function () {
     function address() {
         var parer = $(".content_address .container .row .col-md-4 .addressed p").html()
         var people = $(".content_address .container .row .col-md-4 .addressed .man").html()
+        // alert(people)
         var tel = $(".content_address .container .row .col-md-4 .addressed .tel").html()
-        $(".submit_box .container .col-md-12 p").html(parer)
+        // alert(tel)
+        $(".submit_box .container .col-md-12 .col-md-8 p").html(parer)
+        $(".submit_box .container .col-md-12 .col-md-8 .names").html(people)
+        $(".submit_box .container .col-md-12 .col-md-8 .tels").html(tel)
     }
+
     address()
 
     //默认地址选定
     $(".content_address .col-md-4").on("click", function () {
         $(".content_address .col-md-4 .box_order").removeClass("addressed")
-        $(this).children().addClass("addressed")
+        $(this).children(".box_orders").addClass("addressed")
         address()
     })
 
+    //总额
+    var sum = 0;
+    $(".order_information .shop_order").each(function () {
+        var add = parseFloat($(".money").html());
+        sum = parseFloat(sum) + add;
+        $(".submit_box .total").html(parseFloat(sum));
+    })
+//    新增工作地址
+    $(".content_address .new_add").on("click",function(){
+        $(".new_address_box").css("display","block")
+    })
+    $(".close_box").on("click",function(){
+        $(".new_address_box").css("display","none")
+    })
 
+
+    function select1() {
+        $.ajax(
+            {
+                type: "post",
+                url: "Handler.ashx",
+                data: { "type": "province" },
+                success: function (msg) {
+                    for (var i = 0; i < msg.length; i++) {
+                        $("#S1").append("<option value=" + msg[i].ProvinceID + ">" + msg[i].ProvinceName + "</option>");
+                    }
+                    select2();
+                }
+            })
+    };
+    function select2() {
+        $("#S2").html("");
+        $.ajax(
+            {
+                type: "post",
+                url: "Handler.ashx",
+                data: { "type": "city","provinceID":$('#S1').attr("value") },
+                success: function (msg) {
+                    for (var i = 0; i < msg.length; i++) {
+                        $("#S2").append("<option value=" + msg[i].CityID + ">" + msg[i].CityName + "</option>");
+                    }
+                    select3();
+                }
+            })
+    };
+    function select3() {
+        $("#S3").html("");
+        $.ajax(
+            {
+                type: "post",
+                url: "Handler.ashx",
+                data: { "type": "district","cityID":$('#S2').attr("value") },
+                success: function (msg) {
+                    for (var i = 0; i < msg.length; i++) {
+                        $("#S3").append("<option value=" + msg[i].DistrictID + ">" + msg[i].DistrictName + "</option>");
+                    }
+                }
+            })
+    };
+    $(function () {
+        select1();
+        $('#S1').bind("change", select2);
+        $('#S2').bind("change", select3);
+    });
+
+        $("#province").ProvinceCity()
 })
 
 

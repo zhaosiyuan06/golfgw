@@ -11,6 +11,9 @@
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
+    <!--<script type="text/javascript" src="http://lib.h-ui.net/jquery/1.9.1/jquery.min.js"></script>-->
+    <script type="text/javascript" src="js/jquery.provincesCity.js"></script>
+    <script type="text/javascript" src="js/provincesData.js"></script>
 </head>
 <body style="background:#EBEBEB">
 <!--顶部导航-->
@@ -33,6 +36,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html">新闻</a></li>
                         <li class="active"><a href="product.html" class="selected">产品</a></li>
                         <li><a href="forum.html">论坛</a></li>
                         <li><a href="#">场馆方入口</a></li>
@@ -67,24 +71,20 @@
 <div class="content_address">
     <div class="container">
         <span class="address">收货地址</span>
+        <span class="new_add">新增地址</span>
         <div class="row">
             <div class="col-md-4">
-                <div class="box_order addressed">
-                    <span class="man">收货人</span>
+                <div class="box_order box_orders addressed">
+                    <span class="man">收货人1</span>
                     <span class="tel">15512511225</span>
-                    <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                    <p>丰台北路32号院华胜写字楼A座107室 </p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="box_order">
-                    <span class="man">收货人</span>
-                    <span class="tel">15512511225</span>
-                    <p>北京市丰台区丰台北路32号院华胜写字楼A座107室  </p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="box_order">
-                    <div class="new_add">+新增收货地址</div>
+                <div class="box_order box_orders">
+                    <span class="man">收货人2</span>
+                    <span class="tel">16612844563</span>
+                    <p>北京市丰台区丰台北路32号院华胜写字楼A座107室 </p>
                 </div>
             </div>
         </div>
@@ -98,10 +98,16 @@
                 <span>电子普通发票 个人</span>
             </div>
             <div class="col-md-12 shop_order">
-                <img src="image/g1.jpg" alt="" >
+                <img src="image/g1.jpg" alt="">
                 <h3>高尔夫</h3>
                 <span class="number">x1</span>
-                <span class="money">￥2499.00</span>
+                <span class="money">2499.50</span>
+            </div>
+            <div class="col-md-12 shop_order">
+                <img src="image/g1.jpg" alt="">
+                <h3>高尔夫</h3>
+                <span class="number">x1</span>
+                <span class="money">2499.00</span>
             </div>
         </div>
     </div>
@@ -110,11 +116,47 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <span>配送至:</span>
-                <p>a</p>
+                <div class="col-md-1">配送至:</div>
+                <div class="col-md-8">
+                    <p></p>
+                    <span class="names">收货人姓名</span>
+                    <span class="tels">15514688775</span>
+                </div>
+                <div class="col-md-3">
+                    <span>应付总额:</span>
+                    <span class="money">￥<span class="total">2599</span></span>
+                </div>
             </div>
         </div>
-         <button type="submit">提交订单</button>
+        <button type="submit">提交订单</button>
+    </div>
+</div>
+<div class="new_address_box">
+    <div class="new_address">
+        <div class="close_box">
+            <img src="image/closes.png" alt="">
+        </div>
+        <div class="infor_box">
+            <h3>添加地址</h3>
+            <div class="infor_input">
+                <span class="shr">收货人:</span>
+                <input type="text" class="shr_input">
+            </div>
+            <div class="infor_input">
+                <span class="shr">收货地址:</span>
+                <div id="province"></div><br>
+                <span class="shr"></span>
+                <input type="text" class="shr_input" style="margin-top: 10px">
+            </div>
+            <div class="infor_input">
+                <span class="shr">联系方式:</span>
+                <input type="text" class="shr_input">
+            </div>
+
+        </div>
+        <div class="button_box">
+            <span class="save">保存</span>
+        </div>
     </div>
 </div>
 <!--登录-->
