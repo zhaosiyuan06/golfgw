@@ -93,7 +93,7 @@ $(function () {
         $(".submit_box .total").html(parseFloat(sum));
     })
 //    新增工作地址
-    $(".content_address .new_add").on("click",function(){
+    $(".content_address .new_add,.address_table .right").on("click",function(){
         $(".new_address_box").css("display","block")
     })
     $(".close_box").on("click",function(){
@@ -106,6 +106,11 @@ $(function () {
 
         var index = $(this).index();
         $(".infor_container>ul").eq(index).show().siblings().hide();
+    })
+//    修改个人信息
+    $(".resert").on("click",function () {
+        $(".col-md-9 .infor_container ul").css("display","none")
+        $(".wan_infor").css("display","block")
     })
 })
 
