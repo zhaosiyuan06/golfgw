@@ -170,6 +170,7 @@ li {
 
 .golf_container .container .col-md-4:hover {
     border: 1px solid #fff;
+    box-shadow: 0 0  3px #fff;
 }
 
 .golf_container .container .col-md-4 .img-box {
@@ -358,7 +359,6 @@ li {
     background: #242528;
     transition: .5s;
     cursor: pointer;
-
 }
 
 .golf_news .col-md-2 .news_box a {
@@ -402,6 +402,26 @@ li {
     background: #f5f5f5;
     border-radius: 5px;
     /*border: 1px solid red ;*/
+}
+.post_module .row .col-md-3 .p_box:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-style: solid;
+    border-width: 0;
+    border-color: rgba(0,0,0,0.2) #2B2C30;
+    border-radius: 0 0 0 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    -webkit-transition: all 0.4s ease-out;
+    transition:all 0.4s ease-out;
+    z-index: 55;
+}
+
+.post_module .row .col-md-3 .p_box:hover:before{
+    border-right-width:45px;
+    border-bottom-width:45px;
+    z-index: 66;
 }
 
 .post_module .row .col-md-3 .p_box .col-md-3 img {
@@ -698,7 +718,7 @@ li {
 }
 
 .content .container .list {
-    padding: 0px 10px;
+    padding: 0px 0px;
     background: white;
     min-height: 600px;
 }
@@ -740,6 +760,8 @@ li {
     height: 50px;
     background: url("../image/star.png") no-repeat center;
     cursor: pointer;
+    z-index: 2;
+    overflow: hidden;
 }
 
 .news {
@@ -899,6 +921,7 @@ li {
 
 .content .container .p_box p {
     line-height: 24px;
+
 }
 
 .content .container .reply {
@@ -996,6 +1019,7 @@ li {
 .product_box .container .row .col-md-3 .product_show {
     width: 100%;
     border: 1px solid #ccc;
+    box-shadow:0px 0px 5px #aaa;
 }
 
 .product_box .container .row .col-md-3 .product_show .img-box {
@@ -1226,7 +1250,7 @@ li {
 
 .show_product_box .container .col-md-8 .pay {
     border: 1px solid #000000;
-    padding: 8px 20px;
+    padding: 8px 8px;
     color: #2B2C30;
     font-size: 16px;
     background: #fff;
@@ -1234,8 +1258,20 @@ li {
     margin: 5px;
     cursor: pointer;
 }
-
+.show_product_box .container .col-md-8 .pay:hover{
+     transition: all .5s ease-in 0s;
+     border: 1px solid #ffffff;
+     color:#ffffff!important;
+    background: #4d4d4d;;
+     border-radius: 5px;
+ }
+.show_product_box .container .col-md-8 .pay a:hover{
+    color:#ffffff!important;
+}
 .show_product_box .container .col-md-8 .pay a {
+    padding: 10px 20px;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     color: black;
 }
@@ -1243,10 +1279,11 @@ li {
 .show_product_box .container .col-md-8 .go a {
     text-decoration: none;
     color: white;
+    padding: 10px 20px;
 }
 
 .show_product_box .container .col-md-8 .go {
-    padding: 8px 20px;
+    padding: 8px 8px;
     color: #fff;
     font-size: 16px;
     background: #4d4d4d;;
@@ -1254,7 +1291,16 @@ li {
     margin: 5px 10px;
     cursor: pointer;
 }
-
+.show_product_box .container .col-md-8 .go:hover{
+    border: 1px solid #101010;
+    background: #ffffff;
+    color: #101010;
+    transition: all .3s ease-in 0s;
+}
+.show_product_box .container .col-md-8 .go a:hover{
+    color: #101010;
+    transition: all .3s ease-in 0s;
+}
 /*ready_order*/
 .makesure {
     background: #fff;
@@ -1309,7 +1355,6 @@ li {
     border-radius: 2px;
     cursor: pointer;
 }
-
 .content_address .container .row .col-md-4 .box_order {
     cursor: pointer;
     width: 100%;
@@ -1665,8 +1710,17 @@ li {
     display: block;
     margin: auto;
     border-radius: 50%;
+    cursor: pointer;
 }
 
+.trans{
+    transform: rotateY(180deg);
+    transition: all 1000ms ease-out;
+}
+.tran{
+    transform: rotateY(0deg);
+    transition: all 1000ms ease-out;
+}
 .information_box .container .col-md-3 .leader-container .top_infor span {
     width: 100%;
     text-align: center;
@@ -1727,7 +1781,7 @@ li {
     width: 100%;
     margin: 0;
     padding: 0;
-    /*background: pink;*/
+    background: #fff;
 }
 
 .information_box .container .col-md-9 .infor_container ul h3 {
@@ -2332,6 +2386,13 @@ li {
     text-align: center;
     line-height: 50px;
 }
+.add{
+    transition: 5s;
+}
+.footer .col-md-12{
+    font-size: 14px;
+    line-height: 20px;
+}
 @media (min-width: 992px) and (max-width: 1200px) {
     .wan_infor div input {
         width: 245px;
@@ -2357,7 +2418,16 @@ li {
     .wan_infor div {
         width: 70%;
     }
+    .video_zhezhao .videoplay_Box{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-left: 0;
+        margin-top: 0;
 
+    }
     .information_box .container .col-md-9 .infor_container ul h3 {
         font-size: 22px;
         font-weight: 500;
@@ -2467,6 +2537,20 @@ li {
 }
 
 @media screen and (max-width: 414px) {
+    .content .container .list {
+        padding: 0px 10px;
+
+    }
+    .video_zhezhao .videoplay_Box{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-left: 0;
+        margin-top: 0;
+
+    }
     .person_module .container .col-md-12 .row .col-md-1{
         text-align: right;
     }

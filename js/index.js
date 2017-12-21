@@ -5,6 +5,7 @@ $(function () {
         $(".video_zhezhao .videoplay_Box video").attr("src", imgSrc);
         $(".video_zhezhao .videoplay_Box video")[0].play();
         $(".video_zhezhao").css("display", "block")
+        screen.orientation.lock("portrait-primary");
     })
     $(".video_zhezhao img").on("click", function () {
         $(".video_zhezhao .videoplay_Box video")[0].pause();
@@ -12,10 +13,16 @@ $(function () {
     })
     //相关资讯鼠标经过样式
     $(".golf_news .col-md-2  .news_box").on("mouseenter", function () {
-        $(this).css("margin-top", "-20px")
+        $(this).css({
+            "margin-top": "-20px",
+            "box-shadow": "0 0 10px #6CB670"
+        })
     })
     $(".golf_news .col-md-2  .news_box").on("mouseleave", function () {
-        $(this).css("margin-top", "0px")
+        $(this).css({
+            "margin-top": "0px",
+            "box-shadow": "0 0 0px #6CB670"
+        })
     })
     //注册
     $("#loginin").on("click", function () {
@@ -43,6 +50,7 @@ $(function () {
             $(this).removeClass("news")
         } else {
             $(this).addClass("news")
+
         }
     })
 
@@ -93,24 +101,44 @@ $(function () {
         $(".submit_box .total").html(parseFloat(sum));
     })
 //    新增工作地址
-    $(".content_address .new_add,.address_table .right").on("click",function(){
-        $(".new_address_box").css("display","block")
+    $(".content_address .new_add,.address_table .right").on("click", function () {
+        $(".new_address_box").css("display", "block")
     })
-    $(".close_box").on("click",function(){
-        $(".new_address_box").css("display","none")
+    $(".close_box").on("click", function () {
+        $(".new_address_box").css("display", "none")
     })
 
 
 //   信息确认页面选项卡
-    $(".bottom_infor ul li").on("click",function(){
-
+    $(".bottom_infor ul li").on("click", function () {
         var index = $(this).index();
         $(".infor_container>ul").eq(index).show().siblings().hide();
     })
 //    修改个人信息
-    $(".resert").on("click",function () {
-        $(".col-md-9 .infor_container ul").css("display","none")
-        $(".wan_infor").css("display","block")
+    $(".resert").on("click", function () {
+        $(".col-md-9 .infor_container ul").css("display", "none")
+        $(".wan_infor").css("display", "block")
+    })
+    //头像左右旋转效果
+    $(".information_box .container .col-md-3 .leader-container .top_infor img").on("mouseenter", function () {
+        $(this).removeClass("tran").addClass("trans")
+    })
+    $(".information_box .container .col-md-3 .leader-container .top_infor img").on("mouseleave", function () {
+        $(this).removeClass("trans").addClass("tran")
+    })
+    $(".content_address .container .new_add,.person_module .container .col-md-12 .row .col-md-2 img").on("mouseenter", function () {
+        $(this).removeClass("tran").addClass("trans")
+    })
+    $(".content_address .container .new_add,.person_module .container .col-md-12 .row .col-md-2 img").on("mouseleave", function () {
+        $(this).removeClass("trans").addClass("tran")
+    })
+    $(".news_module .container .col-md-9 ul li").on("mouseenter", function () {
+        $(this).css({"background": "#fff",
+        "border-bottom":"1px dashed  #6CB670"})
+    })
+    $(".news_module .container .col-md-9 ul li").on("mouseleave", function () {
+        $(this).css({"background": "none",
+            "border-bottom":"1px dashed #dadada"})
     })
 })
 
