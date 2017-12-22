@@ -13,16 +13,10 @@ $(function () {
     })
     //相关资讯鼠标经过样式
     $(".golf_news .col-md-2  .news_box").on("mouseenter", function () {
-        $(this).css({
-            "margin-top": "-20px",
-            "box-shadow": "0 0 10px #6CB670"
-        })
+        $(this).addClass("mar")
     })
     $(".golf_news .col-md-2  .news_box").on("mouseleave", function () {
-        $(this).css({
-            "margin-top": "0px",
-            "box-shadow": "0 0 0px #6CB670"
-        })
+        $(this).removeClass("mar")
     })
     //注册
     $("#loginin").on("click", function () {

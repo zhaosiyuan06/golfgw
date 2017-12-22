@@ -159,13 +159,15 @@ li {
 .golf_container .container .row, .golf_sell .container .row, .golf_news .container .row, .post_module .container .row {
     padding: 10px 0;
 }
-
+.margin{
+    margin-top: -20px!important;
+}
 .golf_container .container .col-md-4 {
     color: #ddd;
     padding: 10px 30px;
-    transition: 1s;
+    transition: 2s;
     border: 1px solid #2B2C30;
-
+    margin-top: 50px;
 }
 
 .golf_container .container .col-md-4:hover {
@@ -349,16 +351,26 @@ li {
 .golf_news .col-md-2 {
     padding: 10px;
     float: left;
+
 }
 
 .golf_news .col-md-2 .news_box {
     visibility: visible;
+    transition: 1.5s;
+    margin-top: 0;
     animation-duration: 500ms;
     animation-name: fadeInUp;
     border: 1px solid #fff;
     background: #242528;
-    transition: .5s;
     cursor: pointer;
+}
+
+.margintop{
+    margin-top: -50px!important;
+}
+.mar{
+    box-shadow: 0 0 10px #6CB670;
+    margin-top: -70px!important;
 }
 
 .golf_news .col-md-2 .news_box a {
@@ -389,12 +401,14 @@ li {
     color: #000000;
     padding-bottom: 100px;
 }
-
+.martop{
+    margin-top: -10px;
+}
 .post_module .row .col-md-3 {
     padding: 10px;
     font-weight: 600;
+    transition: 1s;
 }
-
 .post_module .row .col-md-3 .p_box {
     display: inline-block;
     width: 100%;
@@ -2415,6 +2429,9 @@ li {
 }
 
 @media screen and (max-width: 768px) {
+    .margintop {
+        margin-top: 10px!important;
+    }
     .wan_infor div {
         width: 70%;
     }
