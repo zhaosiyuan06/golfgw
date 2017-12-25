@@ -5,7 +5,6 @@ body {
     color: #fff !important;
     margin: 0;
     padding: 0;
-    background: #EBEBEB;
 }
 
 html, body {
@@ -115,6 +114,9 @@ li {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
+    filter:alpha(opacity=0.5);
+    /*!*background: #7F000000;*!*/
+    /*opacity: 0.5;*/
     z-index: 10;
 }
 
@@ -216,6 +218,8 @@ li {
 .golf_sell .container .col-md-4 {
     border: 1px solid #fff;
     padding: 10px;
+    margin-top: 50px;
+    transition: 1s;
 }
 
 .golf_sell .container .col-md-4 a {
@@ -297,8 +301,12 @@ li {
     border: 1px solid #fff;
     padding: 10px;
     text-align: center;
+    margin-top: 50px;
+    transition: 1s;
 }
-
+.margin_col{
+    margin-top: 0!important;
+}
 .golf_sell .container .col-md-8 .zhe2 span {
     display: inline-block;
     width: 100px;
@@ -356,13 +364,14 @@ li {
 
 .golf_news .col-md-2 .news_box {
     visibility: visible;
-    transition: 1.5s;
+    transition: 1s;
     margin-top: 0;
     animation-duration: 500ms;
     animation-name: fadeInUp;
     border: 1px solid #fff;
     background: #242528;
     cursor: pointer;
+
 }
 
 .margintop{
@@ -380,11 +389,14 @@ li {
 
 .golf_news .col-md-2 .news_box img {
     width: 100%;
+    height: 115px;
 }
 
 .golf_news .col-md-2 .news_box h4 {
     text-align: center;
     font-size: 16px;
+    height: 40px;
+    line-height: 20px;
 }
 
 .golf_news .col-md-2 .news_box p {
@@ -1019,17 +1031,88 @@ li {
 .product_box .container, .show_product_box .container {
     margin: 0 auto;
     padding: 30px 30px;
-    background: #F1F4F9;
-    border-bottom: 1px solid #E1E5EE;
-    box-shadow: 1px 0 0 rgba(0, 0, 0, 0.25), -1px 0 0 rgba(0, 0, 0, 0.25);
+    /*background: #F1F4F9;*/
+    background: rgba(255,255,255,0.6);
+    /*border-bottom: 1px solid #E1E5EE;*/
+    /*box-shadow: 1px 0 0 rgba(0, 0, 0, 0.25), -1px 0 0 rgba(0, 0, 0, 0.25);*/
     position: relative;
-    min-height: 800px;
+    min-height:850px;
+    box-shadow: 0 0 5px #fff;
 }
-
+.product_box .container .row{
+    margin-bottom: 20px;
+}
+.product_box .background_Img{
+    height: 200px;
+    width: 100%;
+    background: url("../image/g3.jpg") no-repeat;
+    background-size: 100%;
+}
 .product_box .container .row .col-md-3 {
     padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: 1s;
 }
-
+.top_col{
+    margin-top: -10px!important;
+}
+.product_box .container .row .col-md-3:nth-child(1){
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.product_box .container .row .col-md-3:nth-child(2){
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -ms-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    transition-delay: 200ms;
+}
+.product_box .container .row .col-md-3:nth-child(3){
+    -webkit-transition-delay: 400ms;
+    -moz-transition-delay: 400ms;
+    -ms-transition-delay: 400ms;
+    -o-transition-delay: 400ms;
+    transition-delay: 400ms;
+}
+.product_box .container .row .col-md-3:nth-child(4){
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    transition-delay: 600ms;
+}
+.product_box .container .row .col-md-3:nth-child(5){
+    -webkit-transition-delay: 800ms;
+    -moz-transition-delay: 800ms;
+    -ms-transition-delay: 800ms;
+    -o-transition-delay: 800ms;
+    transition-delay: 800ms;
+}
+.product_box .container .row .col-md-3:nth-child(6){
+    -webkit-transition-delay: 1000ms;
+    -moz-transition-delay: 1000ms;
+    -ms-transition-delay: 1000ms;
+    -o-transition-delay: 1000ms;
+    transition-delay:1000ms;
+}
+.product_box .container .row .col-md-3:nth-child(7){
+    -webkit-transition-delay: 1200ms;
+    -moz-transition-delay: 1200ms;
+    -ms-transition-delay: 1200ms;
+    -o-transition-delay:1200ms;
+    transition-delay: 1200ms;
+}
+.product_box .container .row .col-md-3:nth-child(8){
+    -webkit-transition-delay: 1400ms;
+    -moz-transition-delay: 1400ms;
+    -ms-transition-delay: 1400ms;
+    -o-transition-delay: 1400ms;
+    transition-delay: 1400ms;
+}
 .product_box .container .row .col-md-3 .product_show {
     width: 100%;
     border: 1px solid #ccc;
@@ -2148,7 +2231,34 @@ li {
     width: 100%;
     min-height: 200px;
 }
-
+.news_module .container .col-md-3 .headBox ul{
+    margin: 0;
+    padding: 0;
+}
+.news_module .container .col-md-3 .headBox ul li{
+    line-height: 24px;
+    padding: 14px 0;
+}
+.news_module .container .col-md-3 .headBox ul li a{
+    text-decoration: none;
+    color: #101010;
+}
+.news_module .container .col-md-3 .headBox ul li img{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    float: left;
+    margin-top: 2px;
+}
+.news_module .container .col-md-3 .headBox ul li h6{
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+.news_module .container .col-md-3 .headBox ul li a:hover{
+    color:#6CB670;
+}
 .news_module .container .col-md-9 .head_line {
     width: 100%;
     border-bottom: 1px solid #ccc;
@@ -2429,6 +2539,19 @@ li {
 }
 
 @media screen and (max-width: 768px) {
+    .news_module .container .col-md-3 .headBox ul li h6{
+        font-size: 12px;
+        width: 91%;
+    }
+    .col-md-9 .contentBox  .article_body img{
+        width: 80%;
+    }
+    .news_module .container .col-md-3 {
+        padding: 20px 0;
+    }
+    .golf_news .col-md-2 .news_box img{
+        height: 151px;
+    }
     .margintop {
         margin-top: 10px!important;
     }
@@ -2554,6 +2677,12 @@ li {
 }
 
 @media screen and (max-width: 414px) {
+    .news_module .container .col-md-3 .headBox ul li img{
+        margin-top: 0px;
+    }
+    .golf_news .col-md-2 .news_box img{
+        height: 100%;
+    }
     .content .container .list {
         padding: 0px 10px;
 

@@ -38,7 +38,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Golf</a>
+                    <a class="navbar-brand" href="#" style="padding: 0 20px"><img src="image/golf2.png" alt="" style="width:36px;height: 36px;margin-top: 7px"></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -231,8 +231,8 @@
                 <div class="news_box">
                     <a href="news.html">
                         <div class="a">
-                            <img src="image/g1.jpg" alt="" >
-                            <h4>新闻资讯1</h4>
+                            <img src="image/g3.jpg" alt="" >
+                            <h4>新闻资讯1新闻资讯1新闻资讯1</h4>
                             <p>《标准挥杆科学教学法》等系列发明专利已在中国、美国、日本获得发明专利并授权。</p>
                         </div>
                     </a>
@@ -656,6 +656,7 @@
     </div>
 </footer>
 <!--内容结束-->
+<!--监听滚动条事件-->
 <script type="text/javascript">
     setInterval(function(){
         margin()
@@ -704,10 +705,40 @@
                     $(this).removeClass("margin")
                 }
             })
+            $('.golf_sell .container .col-md-4').each(function(){
+                //页面的y轴滚动距离
+                var sT = $(window).scrollTop();
+                //页面可视区域的高度
+                var CH = $(window).height();
+                //获取当前元素距离文档顶部的偏移量
+                var OT = $(this).offset().top;
+                //如果图片即将要展现在屏幕上的话
+                if(OT < sT + CH){
+                    $(this).addClass("margin_col")
+                }else{
+                    $(this).removeClass("margin_col")
+                }
+            })
+            $('.golf_sell .container .col-md-8').each(function(){
+                //页面的y轴滚动距离
+                var sT = $(window).scrollTop();
+                //页面可视区域的高度
+                var CH = $(window).height();
+                //获取当前元素距离文档顶部的偏移量
+                var OT = $(this).offset().top;
+                //如果图片即将要展现在屏幕上的话
+                if(OT < sT + CH){
+                    $(this).addClass("margin_col")
+                }else{
+                    $(this).removeClass("margin_col")
+                }
+            })
+
         })
     }
     margin()
 </script>
+<!--swiper轮播-->
 <script>
     var swiper = new Swiper('.swiper-container',{
         autoplay: {

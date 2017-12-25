@@ -269,11 +269,11 @@
 }
 
 .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     display: inline-block;
     border-radius: 100%;
-    background: #000;
+    background:#fff;
     opacity: .2
 }
 
@@ -294,7 +294,7 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination-bullet-active {
     opacity: 1;
-    background: #007aff
+    background:#6CB670;
 }
 
 .swiper-container-vertical > .swiper-pagination-bullets {
@@ -327,7 +327,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 4px
+    margin: 0 6px
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
