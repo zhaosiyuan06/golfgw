@@ -657,46 +657,56 @@
 </footer>
 <!--内容结束-->
 <script type="text/javascript">
-    $(window).scroll(function(){
-        $('.golf_news .col-md-2 .news_box').each(function(){
-            //页面的y轴滚动距离
-            var sT = $(window).scrollTop();
-            //页面可视区域的高度
-            var CH = $(window).height();
-            //获取当前元素距离文档顶部的偏移量
-            var OT = $(this).offset().top;
-            //如果图片即将要展现在屏幕上的话
-            if(OT < sT + CH){
-                $(this).addClass("margintop")
-            }
+    setInterval(function(){
+        margin()
+    },500)
+    function margin(){
+        $(window).scroll(function(){
+            $('.golf_news .col-md-2 .news_box').each(function(){
+                //页面的y轴滚动距离
+                var sT = $(window).scrollTop();
+                //页面可视区域的高度
+                var CH = $(window).height();
+                //获取当前元素距离文档顶部的偏移量
+                var OT = $(this).offset().top;
+                //如果图片即将要展现在屏幕上的话
+                if(OT < sT + CH){
+                    $(this).addClass("margintop")
+                }else{
+                    $(this).removeClass("margintop")
+                }
+            })
+            $(' .post_module .row .col-md-3').each(function(){
+                //页面的y轴滚动距离
+                var sT = $(window).scrollTop();
+                //页面可视区域的高度
+                var CH = $(window).height();
+                //获取当前元素距离文档顶部的偏移量
+                var OT = $(this).offset().top;
+                //如果图片即将要展现在屏幕上的话
+                if(OT < sT + CH){
+                    $(this).addClass("martop")
+                }else{
+                    $(this).removeClass("martop")
+                }
+            })
+            $('  .golf_container .container .col-md-4').each(function(){
+                //页面的y轴滚动距离
+                var sT = $(window).scrollTop();
+                //页面可视区域的高度
+                var CH = $(window).height();
+                //获取当前元素距离文档顶部的偏移量
+                var OT = $(this).offset().top;
+                //如果图片即将要展现在屏幕上的话
+                if(OT < sT + CH){
+                    $(this).addClass("margin")
+                }else{
+                    $(this).removeClass("margin")
+                }
+            })
         })
-
-        $(' .post_module .row .col-md-3').each(function(){
-            //页面的y轴滚动距离
-            var sT = $(window).scrollTop();
-            //页面可视区域的高度
-            var CH = $(window).height();
-            //获取当前元素距离文档顶部的偏移量
-            var OT = $(this).offset().top;
-            //如果图片即将要展现在屏幕上的话
-            if(OT < sT + CH){
-                $(this).addClass("martop")
-            }
-        })
-        $('  .golf_container .container .col-md-4').each(function(){
-            //页面的y轴滚动距离
-            var sT = $(window).scrollTop();
-            //页面可视区域的高度
-            var CH = $(window).height();
-            //获取当前元素距离文档顶部的偏移量
-            var OT = $(this).offset().top;
-            //如果图片即将要展现在屏幕上的话
-            if(OT < sT + CH){
-                $(this).addClass("margin")
-            }
-        })
-
-    })
+    }
+    margin()
 </script>
 <script>
     var swiper = new Swiper('.swiper-container',{
