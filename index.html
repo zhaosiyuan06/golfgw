@@ -12,8 +12,9 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/jquery.ellipsis.js"></script>
-    <script type="text/javascript" src="js/jquery.ellipsis.unobtrusive.js"></script>
+    <script src="js/ellipsis/jquery.ellipsis.js"></script>
+    <script type="text/javascript" src="js/ellipsis/jquery.ellipsis.unobtrusive.js"></script>
+    <script src="js/autoScroll.js"></script>
     <style>
         .select li:nth-child(1){
             background: #fff;
@@ -365,9 +366,19 @@
 </div>
 <section id="counter1" class="parallax-section">
     <div class="container">
-        <div class="row">
-
-        </div>        <!-- end row -->
+            <div class="autoBox" id="autoScroll01">
+                <ul class="clearfix">
+                    <li><a href="#"><img src="image/g1.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="image/g2.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="image/g3.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="image/g4.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="image/g5.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="image/g4.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="image/g3.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="image/g2.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="image/g1.jpg" alt=""></a></li>
+                </ul>
+            </div><!-- end row -->
     </div>    <!-- end container -->
 </section>
 <!--热门帖子-->
@@ -756,6 +767,20 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+    });
+</script>
+<!--广告-->
+<script>
+    $(function(){
+        //下面是调用语句，以ID名区分
+        $("#autoScroll01").autoScroll({
+            direction: 'left',    //滚动方向，'up'、'down'、'left'、'right'，*必须参数
+            interval:150,      //滚动间隔，单位'ms'，一定要大于'滚动速度'，*必须参数
+            speed: 100,      //滚动完成耗时，单位'ms'，一定要小于'滚动间隔'，*必须参数
+            distance: 3,      //单次滚动距离，单位'px'，*必须参数
+            liWidth: 144,      //单个li的盒模型高度&宽度(包括margin值。左右滚动只有liWidth参数，上下滚动只有liHeight参数)，*必须参数
+            showNum: 6      //显示几个li，父级高会自适应，但不要超过最大个数，*必须参数
+        });
     });
 </script>
 </body>

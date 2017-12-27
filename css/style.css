@@ -218,11 +218,48 @@ li {
 #counter1 {
     background-position: 50% -108px;
     background-image: url(../image/twitter.jpg);
-    padding: 100px 0;
+    padding: 30px 0;
     background-attachment: fixed !important;
 
 }
-
+.autoBox {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.autoBox ul {
+    position: absolute;
+    list-style: none;
+    z-index: 2;
+}
+/* 第一、四个列表 */ /* PS：左右滚动型列表需要css定义高度，li标签可以有margin值 */
+#autoScroll01, #autoScroll04 {
+    width: 100%!important;
+    height: 174px;
+}
+#autoScroll01 ul li, #autoScroll04 ul li {
+    float: left;
+    width: 160px;
+    height: 168px;
+    padding: 3px;
+    margin: 0 5px;
+    _display: inline;
+}
+#autoScroll01 li a, #autoScroll04 li a {
+    display: block;
+    padding: 3px;
+    border: 1px solid #dbdbdb;
+    box-shadow: 0 0 3px rgba(170, 223, 252, 0.5);
+}
+#autoScroll01 li a:hover, #autoScroll04 li a:hover {
+    border-color: #71ddff;
+    box-shadow: 0 0 3px rgba(77, 185, 245, .90);
+}
+#autoScroll01 li img, #autoScroll04 li img {
+    display: block;
+    width: 146px;
+    height: 160px;
+}
 .golf_sell .container .col-md-4 {
     border: 1px solid #fff;
     padding: 10px;
