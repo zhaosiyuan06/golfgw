@@ -98,7 +98,16 @@ $(function () {
     $(".content_address .new_add,.address_table .right").on("click", function () {
         $(".new_address_box").css("display", "block")
     })
-    $(".close_box").on("click", function () {
+    $(".address_table table tr td.xiugai img").on("click", function () {
+        var user=$(this).parent().prev("td").prev("td").prev("td").prev("td").html();
+        var address=$(this).parent().prev("td").prev("td").prev("td").html();
+        var tel=$(this).parent().prev("td").prev("td").html();
+        $(".new_address_box .new_address .infor_box .infor_input .shr_input").val(user);
+        $(".new_address_box .new_address .infor_box .infor_input .shr_address").val(address);
+        $(".new_address_box .new_address .infor_box .infor_input .shr_tel").val(tel);
+        $(".new_address_box").css("display", "block")
+    })
+    $(".close_box,.new_address_box .new_address .button_box span.save").on("click", function () {
         $(".new_address_box").css("display", "none")
     })
 

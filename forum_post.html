@@ -78,14 +78,15 @@
     <div class="container">
         <div class="row">
             <span class="new_post"><a href="forum_main.html">返回</a></span>
-            <span class="reload">发新帖</span>
+            <!--<span class="reload">发新帖</span>-->
         </div>
         <div class="row post">
             <span class="posts">发表帖子</span>
-            <textarea name="title_boxs"  style="width: 100%;height: 40px;text-align: center;border: 1px solid #ccc"></textarea>
+            <input name="title_boxs" maxlength="30" placeholder="标题 ..." style="padding-left:10px;width: 100%;height: 40px;text-align: center;border: 1px solid #ccc;line-height: 40px;text-align: left"></input>
             <span class="post_font">最多输入30个字符</span>
-            <textarea id="editor" placeholder="发帖..." autofocus maxlength="200"></textarea>
+            <textarea id="editor" placeholder="发帖 ..." autofocus maxlength="200"></textarea>
             <span class="post_font">最多可输入200个字符</span>
+            <input type="submit" style="padding: 8px 15px;float: right;background: #6CB670;color: #fff;border: #fff;border-radius: 5px">
         </div>
         <div class="row pager">123</div>
         <div class="row bottom"></div>
