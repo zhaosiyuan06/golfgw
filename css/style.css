@@ -232,34 +232,90 @@ li {
     list-style: none;
     z-index: 2;
 }
-/* 第一、四个列表 */ /* PS：左右滚动型列表需要css定义高度，li标签可以有margin值 */
-#autoScroll01, #autoScroll04 {
-    width: 100%!important;
-    height: 174px;
+.hl_main5_content {
+    width: 1210px;
+    height:200px;
 }
-#autoScroll01 ul li, #autoScroll04 ul li {
+
+.hl_main5_content1 {
+    width: 1100px;
+    /*margin-top: 5px;*/
+    overflow: hidden;
     float: left;
-    width: 160px;
-    height: 168px;
-    padding: 3px;
-    margin: 0 5px;
-    _display: inline;
+    margin-left: 30px;
+    margin-top: -110px;
+    padding: 0;
 }
-#autoScroll01 li a, #autoScroll04 li a {
-    display: block;
-    padding: 3px;
-    border: 1px solid #dbdbdb;
-    box-shadow: 0 0 3px rgba(170, 223, 252, 0.5);
+
+.hl_main5_content1 ul {
+    width: 1200px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
-#autoScroll01 li a:hover, #autoScroll04 li a:hover {
-    border-color: #71ddff;
-    box-shadow: 0 0 3px rgba(77, 185, 245, .90);
+
+.hl_main5_content1 ul li {
+    float: left;
+    width: 210px;
+    height: 200px;
+    display: inline;
+    /*border: 1px #FF0000 solid;*/
+    margin-right: 10px;
 }
-#autoScroll01 li img, #autoScroll04 li img {
-    display: block;
-    width: 146px;
-    height: 160px;
+
+.hl_main5_content1 ul li img {
+    width: 210px;
+    height: 200px;
 }
+
+.hl_scrool_leftbtn {
+    width: 38px;
+    height: 38px;
+    background: url("../image/rightButton.png") no-repeat;
+    background-size: 36px;
+    float: right;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+.hl_scrool_rightbtn {
+    width: 38px;
+    height: 38px;
+    background: url("../image/leftButton.png") no-repeat;
+    background-size: 36px;
+    float:left;
+    margin-right: 50px;
+    cursor: pointer;
+    margin-top: 100px;
+}
+/*!* 第一、四个列表 *! !* PS：左右滚动型列表需要css定义高度，li标签可以有margin值 *!*/
+/*#autoScroll01, #autoScroll04 {*/
+    /*width: 100%!important;*/
+    /*height: 174px;*/
+/*}*/
+/*#autoScroll01 ul li, #autoScroll04 ul li {*/
+    /*float: left;*/
+    /*width: 160px;*/
+    /*height: 168px;*/
+    /*padding: 3px;*/
+    /*margin: 0 5px;*/
+    /*_display: inline;*/
+/*}*/
+/*#autoScroll01 li a, #autoScroll04 li a {*/
+    /*display: block;*/
+    /*padding: 3px;*/
+    /*border: 1px solid #dbdbdb;*/
+    /*box-shadow: 0 0 3px rgba(170, 223, 252, 0.5);*/
+/*}*/
+/*#autoScroll01 li a:hover, #autoScroll04 li a:hover {*/
+    /*border-color: #71ddff;*/
+    /*box-shadow: 0 0 3px rgba(77, 185, 245, .90);*/
+/*}*/
+/*#autoScroll01 li img, #autoScroll04 li img {*/
+    /*display: block;*/
+    /*width: 146px;*/
+    /*height: 160px;*/
+/*}*/
 .golf_sell .container .col-md-4 {
     border: 1px solid #fff;
     padding: 10px;
