@@ -14,5 +14,14 @@ webStorm
 消息99+
 群消息99+
 VIP服务 
+## 页面效果图
+#### 首页PC：<br>
+![image](https://github.com/zhaosiyuan06/golfgw/blob/master/image/xgt/shouye_pc.png)<br>
+#### 首页Phone：<br>
+![image](https://github.com/zhaosiyuan06/golfgw/blob/master/image/xgt/shouye_phone.jpg)<br>
+#### 二级ipad：<br>
+![image](https://github.com/zhaosiyuan06/golfgw/blob/master/image/xgt/erji_ipad.jpg)<br>
+#### 二级phone：<br>
+![image](https://github.com/zhaosiyuan06/golfgw/blob/master/image/xgt/erji_phone.jpg)<br>
 
 
