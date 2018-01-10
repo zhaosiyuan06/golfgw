@@ -15,6 +15,14 @@ webStorm
 消息99+
 群消息99+
 VIP服务 
+## 主要技术点
+* 响应式布局（CSS媒体查询（Media Query），bootstrap框架）
+* 首页滚动特效（监听滚动条事件）
+* 论坛富文本编辑
+* 三级联动
+* 地址动态选择
+* 产品查看的放大镜效果（仿淘宝）
+* ajax实现用户登录注册重置
 ## 页面效果图（以下图片以及文字内容不是网站真实内容，仅仅是为了前端效果展示）
 #### 首页PC：<br>
 ![image](https://github.com/zhaosiyuan06/golfgw/blob/master/image/xgt/shouye_pc.png)<br>
