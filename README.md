@@ -15,7 +15,7 @@ webStorm
 消息99+
 群消息99+
 VIP服务 
-## 页面效果图（以下图片以及文字内容不是网站真实内容）
+## 页面效果图（以下图片以及文字内容不是网站真实内容，仅仅是为了前端效果展示）
 #### 首页PC：<br>
 ![image](https://github.com/zhaosiyuan06/golfgw/blob/master/image/xgt/shouye_pc.png)<br>
 #### 首页Phone：<br>
