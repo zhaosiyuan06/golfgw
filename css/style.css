@@ -769,7 +769,7 @@ li {
     left: 25px;
 }
 
-.login_register {
+.login_register,.register_login{
     position: absolute;
     bottom: 5px;
     right: 25px;
@@ -2000,6 +2000,7 @@ li {
     min-height: 600px;
     padding: 20px 0px;
     display: inline-block;
+    padding-bottom: 50px;
 }
 
 .information_box .container .col-md-9 .infor_container ul {
@@ -2243,7 +2244,7 @@ li {
     text-align: center !important;
     display: block;
     border-radius: 2px;
-    margin-top: 50px;
+    margin-top: 10px;
     cursor: pointer;
 }
 
@@ -2256,7 +2257,7 @@ li {
     text-align: center !important;
     display: block;
     border-radius: 2px;
-    margin-top: 50px;
+    margin-top: 10px;
     cursor: pointer;
 }
 /*news.html*/

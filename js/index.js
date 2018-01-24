@@ -23,25 +23,32 @@ $(function () {
     $(".golf_news .col-md-2  .news_box").on("mouseleave", function () {
         $(this).removeClass("mar")
     })
-    //注册
-    $("#loginin").on("click", function () {
-        $(".register").css("display", "block")
-        $(".register .form-horizontal").addClass("down")
-    })
-    $(".register .cancel").on("click", function () {
-        $(".register").css("display", "none")
-        $(".register .form-horizontal").removeClass("down")
-    })
     //登录
-    $(".login_register").on("click", function () {
-        $(".register").css("display", "none")
+    $("#loginin").on("click", function () {
         $(".login").css("display", "block")
-        $(".register .form-horizontal").removeClass("down")
         $(".login .form-horizontal").addClass("down")
     })
     $(".login .cancel").on("click", function () {
         $(".login").css("display", "none")
         $(".login .form-horizontal").removeClass("down")
+    })
+    //登录
+    $(".login_register").on("click", function () {
+        $(".login").css("display", "none")
+        $(".register").css("display", "block")
+        $(".login .form-horizontal").removeClass("down")
+        $(".register .form-horizontal").addClass("down")
+    })
+    $(".register_login").on("click",function(){
+        $(".register").css("display", "none")
+        $(".login").css("display", "block")
+        $(".register .form-horizontal").removeClass("down")
+        $(".login .form-horizontal").addClass("down")
+    })
+    $(".register .cancel").on("click", function () {
+        $(".login").css("display", "none")
+        $(".register").css("display", "none")
+        $(".register .form-horizontal").removeClass("down")
     })
 //    点赞
     $(".content .container .new").on("click", function () {
