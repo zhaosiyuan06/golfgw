@@ -2674,6 +2674,37 @@ li {
     -ms-word-break: break-all;
     word-break: break-all;
 }
+
+
+.advanter_left_box{
+    float: left;
+    width: 150px;
+    position: fixed;
+    left: 0;
+    top:200px;
+}
+.advanter_right_box{
+    float: right;
+    width: 150px;
+    position: fixed;
+    right: 0;
+    top:200px;
+}
+.advanter_module .advanter_left_box span,.advanter_module .advanter_right_box span{
+    display: inline-block;
+    position:absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height:30px;
+    background:url("../image/close.png") no-repeat center;
+    background-size: 24px 24px;
+    z-index: 2;
+}
+.advanter_left_box img,.advanter_right_box img{
+    width: 150px;
+    height:150px;
+}
 @media (min-width: 992px) and (max-width: 1200px) {
     .wan_infor div input {
         width: 245px;
@@ -2696,6 +2727,9 @@ li {
 }
 
 @media screen and (max-width: 768px) {
+    .advanter_module{
+        display: none;
+    }
     .product_box .container .row .col-md-3 .product_show img {
         width: 100%;
         height: 220px;

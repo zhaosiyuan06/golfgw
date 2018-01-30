@@ -5,7 +5,7 @@ $(function () {
         $(".video_zhezhao .videoplay_Box video").attr("src", imgSrc);
         $(".video_zhezhao .videoplay_Box video")[0].play();
         $(".video_zhezhao").css("display", "block")
-        screen.orientation.lock("portrait-primary");
+        // screen.orientation.lock("portrait-primary");
     })
     $(".video_zhezhao img").on("click", function () {
         $(".video_zhezhao .videoplay_Box video")[0].pause();
@@ -120,6 +120,7 @@ $(function () {
     })
     $(".close_box,.new_address_box .new_address .button_box span.save").on("click", function () {
         $(".new_address_box").css("display", "none")
+        // alert($("select:nth-child(1)").val()+$("select:nth-child(2)").val()+$("select:nth-child(3)").val())
     })
 
 
@@ -193,6 +194,11 @@ $(function () {
     }
     DY_scroll('.hl_main5_content', '.hl_scrool_leftbtn', '.hl_scrool_rightbtn', '.hl_main5_content1', 3, true);// true为自动播放，不加此参数或false就默认不自动
 
+
+//    侧边广告
+    $(".advanter_module .advanter_left_box span,.advanter_module .advanter_right_box span").on("click",function(){
+        $(this).parent().css("display","none")
+    })
 })
 
 
